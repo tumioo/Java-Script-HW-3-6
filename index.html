@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="-UA-Compatible" content ="ie=edge"> 
+  <title>They Are Among Us!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+<style> body{background-color: "#E6E6FA"} </style>
+</head>
+<body>
+  <div class="container">
+   <div class="jumbotron text-center">
+    <img src="static/images/UFOIMAGE.jpg" alt="UFO" width="800" height="600">
+     <h1>UFO Lookup</h1> 
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+           <div class="form-group" style="width: 200px;">
+              <h3><strong>Filter Search</strong></h3>
+              <label>Enter a Date</label>
+              <input type="text" class="form-control" id="datetime" placeholder=" m/d/yyyy">
+              <label>Enter a City</label>
+              <input type="text" class="form-control" id="city" placeholder="i.e. Sacramento">
+              <label>Enter a State</label>
+              <input type="text" class="form-control" id="state" placeholder="i.e. CA">
+              <label>Enter a Country</label>
+              <input type="text" class="form-control" id="country" placeholder="i.e. US">
+              <label for="shape">Select a Shape (hold Shift to select more than one):</label>
+              <select multiple class="form-control" id="shape">
+                  <option>changing</option>
+                  <option>chevron</option>
+                  <option>cigar</option>
+                  <option>circle</option>
+                  <option>cross</option>
+                  <option>cylinder</option>
+                  <option>disk</option>
+                  <option>egg</option>
+                  <option>fireball</option>
+                  <option>flash</option>
+                  <option>formation</option>
+                  <option>light</option>
+                  <option>other</option>
+                  <option>oval</option>
+                  <option>rectangle</option>
+                  <option>sphere</option>
+                  <option>teardrop</option>
+                  <option>triangle</option>
+                  <option>unknown</option>
+              </select>
+              <label>Enter Comments</label>
+              <input type="text" class="form-control" id="comments" placeholder="new entrees, not for search">
+              <button type="submit" id="search" class="btn btn-primary">Search</button>
+              <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" id="reset" class="btn btn-primary">Reset</button>
+          </div>
+        </div>
+        <div class="col-md-9">
+           <table id= "tableData" class="table table-striped" style="width: 800px;">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Country</th>
+                <th>Shape</th>
+                <th>Duration/Minutes</th>
+                <th>Comments</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</body>
+<script type='text/javascript' src="static/js/index.js"></script>
+<script type='text/javascript' src="static/js/data.js"></script>
+</html>
